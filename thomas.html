@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=no">
+    <meta name="description"
+        content="Turtlebot4 User Manual TurtleBot 4 Lite (left) and TurtleBot 4 (right) TurtleBot 4 is the next-generation of the world&#39;s most popular open sour...">
+    <meta name="revised" content="27886cafd1f154db8cbf8d3bc3edaa734ce976da">
+    <meta name="author" content="turtlebot">
+    <meta name="generator" content="rundocs/jekyll-rtd-theme v2.0.10">
+    <meta name="theme-color" content="#2980b9">
+    <title>User Manual · Turtlebot4 User Manual</title>
+    <meta name="twitter:title" content="User Manual · Turtlebot4 User Manual">
+    <meta name="twitter:description"
+        content="Turtlebot4 User Manual TurtleBot 4 Lite (left) and TurtleBot 4 (right) TurtleBot 4 is the next-generation of the world&#39;s most popular open sour...">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@turtlebot">
+    <meta name="twitter:url" content="https://github.com/turtlebot4-user-manual/">
+    <meta name="twitter:creator" content="@rundocs/jekyll-rtd-theme v2.0.10">
+    <meta property="og:title" content="User Manual · Turtlebot4 User Manual">
+    <meta property="og:description"
+        content="Turtlebot4 User Manual TurtleBot 4 Lite (left) and TurtleBot 4 (right) TurtleBot 4 is the next-generation of the world&#39;s most popular open sour...">
+    <meta property="og:locale" content="en">
+    <meta property="og:url" content="https://github.com/turtlebot4-user-manual/">
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="turtlebot">
+    <meta property="article:published_time" content="2022-02-08T21:05:55+00:00">
+    <meta property="article:modified_time" content="2023-09-08T20:48:19+00:00">
+    <script
+        type="application/ld+json"> { "@context": "https://schema.org", "@type": "Article", "mainEntityOfPage": { "@type": "WebPage", "@id": "https://github.com/turtlebot4-user-manual/" }, "headline": "User Manual · Turtlebot4 User Manual", "image": [], "author": { "@type": "Person", "name": "turtlebot" }, "datePublished": "2022-02-08T21:05:55+00:00", "dateModified": "2023-09-08T20:48:19+00:00", "publisher": { "@type": "Organization", "name": "turtlebot", "logo": { "@type": "ImageObject", "url": "https://avatars.githubusercontent.com/u/2200113?v=4" } }, "description": "Turtlebot4 User Manual TurtleBot 4 Lite (left) and TurtleBot 4 (right) TurtleBot 4 is the next-generation of the world&#39;s most popular open sour..." } </script>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="canonical" href="https://github.com/turtlebot4-user-manual/">
+    <link rel="icon" type="image/svg+xml" href="/turtlebot4-user-manual/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="/turtlebot4-user-manual/assets/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/turtlebot4-user-manual/assets/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/turtlebot4-user-manual/assets/images/favicon-96x96.png" sizes="96x96">
+    <link rel="mask-icon" href="/turtlebot4-user-manual/assets/images/favicon.svg" color="#2980b9">
+    <link rel="apple-touch-icon" href="/turtlebot4-user-manual/assets/images/apple-touch-icon-300x300.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rundocs/jekyll-rtd-theme@2.0.10/assets/css/theme.min.css">
+    <style>
+        .header {
+            color: #fff;
+            background: #000000;
+            background-image: url("/turtlebot4-user-manual/media/turtlebot4_logo.png");
+            background-size: 174px 60px;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: 5px;
+            display: inline-block;
+            height: 140px;
+            content: ""
+        }
+
+        .title a {
+            position: relative;
+            top: 45px
+        }
+
+        a img {
+            border: 0;
+            outline: none
+        }
+
+        .header input {
+            position: relative;
+            top: 45px
+        }
+
+        .header-bar-wrap {
+            background: #000000;
+            position: relative;
+            min-height: 140px;
+            display: inline-block;
+            align-items: center;
+            width: 100%
+        }
+
+        .header-row {
+            display: inline-block;
+            align-items: center;
+            margin-top: 35px;
+            height: 100%
+        }
+
+        .header-row::after {
+            content: "";
+            clear: both;
+            display: grid
+        }
+
+        .header-logo {
+            background: #000000;
+            outline: #000000;
+            color: #000000;
+            display: inline-block;
+            background-size: 95% 95%;
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            margin-left: 20px;
+            margin-right: 30px;
+            margin-top: 3px
+        }
+
+        .header-ul {
+            height: 100%;
+            overflow: auto;
+            text-align: center;
+            align-items: center
+        }
+
+        .cpr-logo {
+            background-image: url("/turtlebot4-user-manual/media/cpr_logo.png");
+            width: 199px;
+            height: 50px
+        }
+
+        .osrf-logo {
+            background-image: url("/turtlebot4-user-manual/media/openrobotics-logo-REV.png");
+            height: 50px;
+            width: 120px
+        }
+
+        .ros-logo {
+            background-image: url("/turtlebot4-user-manual/media/ros_logo.png");
+            height: 40px;
+            width: 160px;
+            margin-bottom: 5px
+        }
+
+        .lessons-logo {
+            background-image: url("/turtlebot4-user-manual/media/lessons.png");
+            height: 50px;
+            width: 50px
+        }
+
+        .github-logo {
+            background-image: url("/turtlebot4-user-manual/media/github_logo.png");
+            height: 50px;
+            width: 50px
+        }
+
+        .shop-logo {
+            background-image: url("/turtlebot4-user-manual/media/shop.jpg");
+            height: 50px;
+            width: 59px
+        }
+
+        .fa-home::before {
+            content: ""
+        }
+
+        .fa-plus-square-o:before {
+            content: ""
+        }
+
+        .toctree .caption {
+            color: #ffcd00
+        }
+
+        figure {
+            padding: 4px;
+            margin: auto
+        }
+
+        figcaption {
+            background-color: white;
+            color: black;
+            font-style: italic;
+            font-size: small;
+            padding: 2px;
+            text-align: center
+        }
+
+        .aligncenter {
+            text-align: center
+        }
+
+        td {
+            text-align: left;
+            vertical-align: middle
+        }
+
+        .center-table {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center
+        }
+
+        .markdown-body ul {
+            padding-left: 1em
+        }
+    </style>
+    <script> window.ui = { title: "User Manual", baseurl: "/turtlebot4-user-manual", i18n: { search_results: "Search Results", search_results_found: "Search finished, found # page(s) matching the search query.", search_results_not_found: "Your search did not match any documents, please make sure that all characters are spelled correctly!" } }; </script>
+    <link rel="stylesheet" href="/turtlebot4-user-manual/assets/css/tab.css">
+</head>
+
+<body class="container">
+    <div class="sidebar-wrap overflow-hidden">
+        <div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
+            <div class="header d-flex flex-column p-3 text-center">
+                <div class="title pb-1"> <a class="h4 no-underline py-1 px-2 rounded-1" href="/turtlebot4-user-manual/"
+                        title="Turtlebot4 User Manual"> <i class="fa fa-home"></i> User Manual </a> </div> <span
+                    class="version"></span>
+                <form class="search pt-2" action="/turtlebot4-user-manual/search.html" method="get" autocomplete="off">
+                    <input class="form-control input-block input-sm" type="text" name="q" placeholder="Search docs...">
+                </form>
+            </div>
+            <div class="toctree py-2" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul> </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/overview/"> Overview </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/overview/features.html">1. Features</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/overview/resources.html">2. Resources</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0" href="/turtlebot4-user-manual/setup/">
+                    Setup </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/setup/basic.html">1. Basic Setup</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/setup/networking.html">2. Networking</a> </li>
+                    <li class="toc level-1 " data-sort="3" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/setup/simple_discovery.html">3. Simple Discovery</a> </li>
+                    <li class="toc level-1 " data-sort="4" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/setup/discovery_server.html">4. Discovery Server</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/software/"> Software </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/overview.html">1. Overview</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/turtlebot4_common.html">2. TurtleBot 4 Common</a>
+                    </li>
+                    <li class="toc level-1 " data-sort="3" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/turtlebot4_robot.html">3. TurtleBot 4 Robot</a> </li>
+                    <li class="toc level-1 " data-sort="4" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/turtlebot4_simulator.html">4. TurtleBot 4
+                            Simulator</a> </li>
+                    <li class="toc level-1 " data-sort="5" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/turtlebot4_desktop.html">5. TurtleBot 4 Desktop</a>
+                    </li>
+                    <li class="toc level-1 " data-sort="6" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/turtlebot4_setup.html">6. TurtleBot 4 Setup</a> </li>
+                    <li class="toc level-1 " data-sort="7" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/create3.html">7. Create® 3</a> </li>
+                    <li class="toc level-1 " data-sort="8" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/sensors.html">8. Sensors</a> </li>
+                    <li class="toc level-1 " data-sort="9" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/rviz.html">9. Rviz2</a> </li>
+                    <li class="toc level-1 " data-sort="10" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/software/simulation.html">10. Simulation</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/mechanical/"> Mechanical </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/mechanical/turtlebot4.html">1. TurtleBot 4</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/mechanical/turtlebot4_lite.html">2. TurtleBot 4 Lite</a> </li>
+                    <li class="toc level-1 " data-sort="3" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/mechanical/payloads.html">3. Payloads Over 9kg</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/electrical/"> Electrical </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/electrical/create3.html">1. Create® 3</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/electrical/rpi4.html">2. Raspberry Pi 4B</a> </li>
+                    <li class="toc level-1 " data-sort="3" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/electrical/pcba.html">3. User Interface PCBA</a> </li>
+                    <li class="toc level-1 " data-sort="4" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/electrical/power_budget.html">4. Power Budget</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/tutorials/"> Tutorials </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/driving.html">1. Driving your TurtleBot 4</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/first_node_cpp.html">2. Creating your first node
+                            (C++)</a> </li>
+                    <li class="toc level-1 " data-sort="3" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/first_node_python.html">3. Creating your first node
+                            (Python)</a> </li>
+                    <li class="toc level-1 " data-sort="4" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/generate_map.html">4. Generating a map</a> </li>
+                    <li class="toc level-1 " data-sort="5" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/navigation.html">5. Navigation</a> </li>
+                    <li class="toc level-1 " data-sort="6" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/turtlebot4_navigator.html">6. TurtleBot 4
+                            Navigator</a> </li>
+                    <li class="toc level-1 " data-sort="7" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/tutorials/multiple_robots.html">7. Multiple robots</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/troubleshooting/"> Troubleshooting </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/troubleshooting/diagnostics.html">1. Diagnostics</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/troubleshooting/ros2_tests.html">2. ROS 2 Tests</a> </li>
+                    <li class="toc level-1 " data-sort="3" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/troubleshooting/faq.html">3. FAQ</a> </li>
+                </ul> <a class="caption d-block text-uppercase no-wrap px-2 py-0"
+                    href="/turtlebot4-user-manual/changelogs/"> Changelogs </a>
+                <ul>
+                    <li class="toc level-1 " data-sort="1" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/changelogs/galactic.html">1. TurtleBot 4 Galactic</a> </li>
+                    <li class="toc level-1 " data-sort="2" data-level="1"> <a class="d-flex flex-items-baseline "
+                            href="/turtlebot4-user-manual/changelogs/humble.html">2. TurtleBot 4 Humble</a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrap">
+        <div class="header d-flex flex-justify-between p-2 hide-lg hide-xl" aria-label="top navigation"> <button
+                id="toggle" aria-label="Toggle menu" class="btn-octicon p-2 m-0 text-white" type="button"> <i
+                    class="fa fa-bars"></i> </button>
+            <div class="title flex-1 d-flex flex-justify-center"> <a class="h4 no-underline py-1 px-2 rounded-1"
+                    href="/turtlebot4-user-manual/">User Manual</a> </div>
+        </div>
+        <div class="header-bar-wrap">
+            <div class="header-row">
+                <ul class="header-ul"> <a href="https://clearpathrobotics.com/">
+                        <div class="header-logo cpr-logo no-underline" border="0"></div>
+                    </a> <a href="https://www.openrobotics.org/">
+                        <div class="header-logo osrf-logo no-underline" border="0"></div>
+                    </a> <a href="https://docs.ros.org/en/humble/index.html">
+                        <div class="header-logo ros-logo no-underline" border="0"></div>
+                    </a> <a href="https://github.com/turtlebot/TurtleBot4Lessons">
+                        <div class="header-logo lessons-logo no-underline" border="0"></div>
+                    </a> <a href="https://github.com/turtlebot">
+                        <div class="header-logo github-logo no-underline" border="0"></div>
+                    </a> <a href="https://clearpathrobotics.com/turtlebot-4/">
+                        <div class="header-logo shop-logo no-underline" border="0"></div>
+                    </a> </ul>
+            </div>
+        </div>
+        <div class="content p-3 p-sm-5">
+            <div class="navigation-top d-flex flex-justify-between">
+                <ul class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
+                    <li class="breadcrumb-item"> <a class="no-underline" href="/turtlebot4-user-manual/" title="/"> <i
+                                class="fa fa-home"></i> </a> </li>
+                    <li class="breadcrumb-item" aria-current="page">index.md</li>
+                </ul>
+            </div>
+            <hr>
+            <div role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
+                <div class="markdown-body" itemprop="articleBody">
+                    <h1 id="turtlebot4-user-manual">Turtlebot4 User Manual</h1>
+                    <figure class="aligncenter"> <img src="media/TurtleBot4.jpg" alt="TurtleBot4" style="width: 90%" />
+                        <figcaption>TurtleBot 4 Lite (left) and TurtleBot 4 (right)</figcaption>
+                    </figure>
+                    <p>TurtleBot 4 is the next-generation of the world's most popular open source robotics platform for
+                        education and research, offering better computing power, better sensors and a world class user
+                        experience at an affordable price point.</p>
+                    <p>TurtleBot 4 comes in two models - TurtleBot 4 and TurtleBot 4 Lite. Both are equipped with an
+                        iRobot® Create® 3 mobile base, a powerful Raspberry Pi 4 running ROS 2, OAK-D stereo camera, 2D
+                        LiDAR and more. All components have been seamlessly integrated to deliver an out-of-the-box
+                        development and learning platform. Tap into the thriving open source ROS developer community and
+                        get started learning robotics on day one.</p>
+                    <h2 id="table-of-contents">Table of Contents</h2>
+                    <ul>
+                        <li><a href="/turtlebot4-user-manual/overview/">Overview</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/overview/features.html">Features</a></li>
+                                <li><a href="/turtlebot4-user-manual/overview/resources.html">Resources</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/setup/">Setup</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/setup/basic.html">Basic Setup</a></li>
+                                <li><a href="/turtlebot4-user-manual/setup/networking.html">Networking</a></li>
+                                <li><a href="/turtlebot4-user-manual/setup/simple_discovery.html">Simple Discovery</a>
+                                </li>
+                                <li><a href="/turtlebot4-user-manual/setup/discovery_server.html">Discovery Server</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/software/">Software</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/software/overview.html">Overview</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/turtlebot4_common.html">TurtleBot 4
+                                        Common</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/turtlebot4_robot.html">TurtleBot 4
+                                        Robot</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/turtlebot4_simulator.html">TurtleBot 4
+                                        Simulator</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/turtlebot4_desktop.html">TurtleBot 4
+                                        Desktop</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/turtlebot4_setup.html">TurtleBot 4
+                                        Setup</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/create3.html">Create® 3</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/sensors.html">Sensors</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/rviz.html">Rviz2</a></li>
+                                <li><a href="/turtlebot4-user-manual/software/simulation.html">Simulation</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/mechanical/">Mechanical</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/mechanical/turtlebot4.html">TurtleBot 4</a></li>
+                                <li><a href="/turtlebot4-user-manual/mechanical/turtlebot4_lite.html">TurtleBot 4
+                                        Lite</a></li>
+                                <li><a href="/turtlebot4-user-manual/mechanical/payloads.html">Payloads Over 9kg</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/electrical/">Electrical</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/electrical/create3.html">Create® 3</a></li>
+                                <li><a href="/turtlebot4-user-manual/electrical/rpi4.html">Raspberry Pi 4B</a></li>
+                                <li><a href="/turtlebot4-user-manual/electrical/pcba.html">User Interface PCBA</a></li>
+                                <li><a href="/turtlebot4-user-manual/electrical/power_budget.html">Power Budget</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/tutorials/">Tutorials</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/tutorials/driving.html">Driving your TurtleBot
+                                        4</a></li>
+                                <li><a href="/turtlebot4-user-manual/tutorials/first_node_cpp.html">Creating your first
+                                        node (C++)</a></li>
+                                <li><a href="/turtlebot4-user-manual/tutorials/first_node_python.html">Creating your
+                                        first node (Python)</a></li>
+                                <li><a href="/turtlebot4-user-manual/tutorials/generate_map.html">Generating a map</a>
+                                </li>
+                                <li><a href="/turtlebot4-user-manual/tutorials/navigation.html">Navigation</a></li>
+                                <li><a href="/turtlebot4-user-manual/tutorials/turtlebot4_navigator.html">TurtleBot 4
+                                        Navigator</a></li>
+                                <li><a href="/turtlebot4-user-manual/tutorials/multiple_robots.html">Multiple robots</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/troubleshooting/">Troubleshooting</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/troubleshooting/diagnostics.html">Diagnostics</a>
+                                </li>
+                                <li><a href="/turtlebot4-user-manual/troubleshooting/ros2_tests.html">ROS 2 Tests</a>
+                                </li>
+                                <li><a href="/turtlebot4-user-manual/troubleshooting/faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/turtlebot4-user-manual/changelogs/">Changelogs</a>
+                            <ul>
+                                <li><a href="/turtlebot4-user-manual/changelogs/galactic.html">TurtleBot 4 Galactic</a>
+                                </li>
+                                <li><a href="/turtlebot4-user-manual/changelogs/humble.html">TurtleBot 4 Humble</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright text-center text-gray" role="contentinfo"> <i class="fa fa-copyright"></i> Clearpath
+                Robotics Inc. 2023 Revision <a class="text-gray"
+                    href="https://github.com/turtlebot/turtlebot4-user-manual/commit/27886cafd1f154db8cbf8d3bc3edaa734ce976da"
+                    title="27886cafd1f154db8cbf8d3bc3edaa734ce976da" rel="noreferrer" target="_blank">27886ca</a> <br>
+                <div class="generator"> Built with <a href="https://pages.github.com" rel="noreferrer" target="_blank"
+                        title="github-pages v209">GitHub Pages</a> using a <a
+                        href="https://github.com/rundocs/jekyll-rtd-theme" rel="noreferrer" target="_blank"
+                        title="rundocs/jekyll-rtd-theme v2.0.10">theme</a> provided by <a href="https://rundocs.io"
+                        rel="noreferrer" target="_blank">RunDocs</a>. </div>
+            </div>
+        </div>
+    </div>
+    <div class="addons-wrap d-flex flex-column overflow-y-auto">
+        <div class="status d-flex flex-justify-between p-2">
+            <div class="title p-1"> <i class="fa fa-book"></i> TurtleBot 4 User Manual </div>
+            <div class="branch p-1"> <span class="name"> v1.0.0 </span> <i class="fa fa-caret-down"></i> </div>
+        </div>
+        <div class="addons d-flex flex-column height-full p-2 d-none">
+            <dl>
+                <dt>GitHub</dt>
+                <dd> <a href="https://github.com/turtlebot/turtlebot4-user-manual" title="Stars: 3"> <i
+                            class="fa fa-github"></i> Source </a> </dd>
+                <dd> <a href="https://github.com/turtlebot/turtlebot4-user-manual/issues" title="Open issues: 3"> <i
+                            class="fa fa-question-circle-o"></i> Issues </a> </dd>
+                <dd> <a href="https://github.com/turtlebot/turtlebot4-user-manual/zipball/gh-pages"
+                        title="Size: 250049 Kb"> <i class="fa fa-download"></i> Download </a> </dd>
+            </dl>
+            <dl>
+                <dt>Stay Connected</dt>
+                <dd> <a href="https://www.youtube.com/c/Clearpath" title="Clearpath Robotics Youtube"> <i
+                            class="fa fa-play"></i> </a> </dd>
+                <dd> <a href="https://www.facebook.com/ClearpathInc/" title="Clearpath Robotics Facebook"> <i
+                            class="fa fa-facebook"></i> </a> </dd>
+                <dd> <a href="https://ca.linkedin.com/company/clearpathinc" title="Clearpath Robotics Linkedin"> <i
+                            class="fa fa-linkedin"></i> </a> </dd>
+                <dd> <a href="https://twitter.com/clearpathrobots" title="Clearpath Robotics Twitter"> <i
+                            class="fa fa-twitter"></i> </a> </dd>
+            </dl>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/rundocs/jekyll-rtd-theme@2.0.10/assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/rundocs/jekyll-rtd-theme@2.0.10/assets/js/theme.min.js"></script>
+    <script src="/turtlebot4-user-manual/assets/js/tabs.js"></script>
+</body>
+
+</html>
